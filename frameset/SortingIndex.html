@@ -1,0 +1,61 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> SORTING OF INDEX ARRAY </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="50" cols="120" id="copp" readonly>     
+        <?php
+
+        $days = array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+        
+        echo"<h1>Index array of days </h1>";
+        echo "<pre>";
+        print_r($days);
+        echo "</pre>";
+        echo"<br><hr><h1>Ascending sorting of array using sort()</h1>";
+        
+        sort($days);
+        
+        echo"<pre>";
+        print_r($days);
+        echo"</pre>";
+        
+        echo"<hr><h1>Descending sorting of array using arsort()</h1>";
+        rsort($days);
+        echo "<pre>";
+        print_r($days);
+        echo "</pre>";
+        
+        ?>
+</textarea>
+<video src="https://youtu.be/tsCX-GQ_Brw?si=dGie2p6KqirIUsIv" width="500px"> </video>
+ </div>
+
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/php4.png" height="95%" width="95%">
+    </div>
+
+</body>
+
+</html>

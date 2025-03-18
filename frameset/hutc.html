@@ -1,0 +1,80 @@
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+    <p class="texttop"> Hut in c  </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="50" cols="120" id="copp" readonly>
+		#include <stdio.h>
+            #include<conio.h>
+            #include<graphics.h>
+            
+            void main()
+            {
+                int gd,gm;
+                clrscr();
+                gd=DETECT;
+                initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+                {
+                    line(50,150,300,150);
+                    line(50,150,50,350);
+                    line(50,350,300,350);
+                    line(300,350,300,150);
+                    line(300,350,630,350);
+                    line(630,350,630,150);
+                    line(630,150,50,150);
+                    line(50,150,180,10);
+                    line(180,10,300,150);
+                    line(180,10,520,10);
+                    //line(550,10,630,150);
+                    line(400,200,500,200);
+                    line(400,200,400,280);
+                    line(400,280,500,280);
+                    line(500,280,500,200);
+                    circle(175,90,20);
+                    line(110,350,110,250);
+                    line(110,250,180,250);
+                    line(180,250,180,350);
+                    line(220,10,338,150);
+                    line(260,10,380,150);
+                    line(300,10,420,150);
+                    line(340,10,460,150);
+                    line(380,10,500,150);
+                    line(420,10,540,150);
+                    line(460,10,580,150);
+                    line(520,10,630,150);
+                }
+                getch();
+            
+            
+            }
+</textarea>
+
+ </div>
+  
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/c5.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>  <div class="ani" id="ani"> </div>
+  <div class="ani2" id="ani2"> </div>
+  <p class="texttop"> MERGE SORT PROGRAM </p>
+  <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+
+  <br>
+  <p class="cl"> SELECT CODE LANGUAGE </p>
+  <input type="button" value="C" id="CODEINC" class="CODEINC" onclick="cani()">
+  <input type="button" value="C++" id="CODEINCPP" class="CODEINCPP" onclick="cppani()">
+  
+  <input type="button" value="ALGO" id="algo" class="algo" onclick="algon()">
+
+  <div class="bca2" id="bca2">
+    <textarea rows="150" cols="125" id="copp" readonly>
+//Code in c
+            #include <stdio.h>
+            #include <conio.h>
+            void merge(int arr[], int l, int m, int r)
+            {
+                int i, j, k;
+                int n1 = m - l + 1;
+                int n2 = r - m;
+                int L[10];
+                int R[10];
+            
+                
+                for (i = 0; i < n1; i++)
+                L[i] = arr[l + i];
+                for (j = 0; j < n2; j++)
+                R[j] = arr[m + 1 + j];
+            
+                
+                i = 0;
+            
+                j = 0;
+            
+                
+                k = l;
+                while (i < n1 && j < n2) {
+                if (L[i] <= R[j]) {
+                    arr[k] = L[i];
+                    i++;
+                }
+                else {
+                    arr[k] = R[j];
+                    j++;
+                }
+                k++;
+                }
+            
+                
+                while (i < n1) {
+                arr[k] = L[i];
+                i++;
+                k++;
+                }
+            
+                
+                while (j < n2) {
+                arr[k] = R[j];
+                j++;
+                k++;
+                }
+            }
+            
+            void mergeSort(int arr[], int l, int r)
+            {
+                if (l < r) {
+               
+                int m = l + (r - l) / 2;
+            
+                
+                mergeSort(arr, l, m);
+                mergeSort(arr, m + 1, r);
+            
+                merge(arr, l, m, r);
+                }
+            }
+            
+            
+            void printArray(int A[], int size)
+            {
+                int i;
+                for (i = 0; i < size; i++)
+                printf("%d ", A[i]);
+                printf("\n");
+            }
+
+            int main()
+            {
+                int arr[100],arr_size,i;
+                clrscr();
+                printf("Enter total number of elements in an array : ");
+                scanf("%d",&arr_size);
+                for(i=0; i<arr_size; i++){
+                    scanf("%d",&arr[i]);
+                }            
+                mergeSort(arr, 0, arr_size - 1);
+            
+                printf("\nSorted array is \n");
+                printArray(arr, arr_size);
+                getch();
+                return 0;
+            }
+</textarea>
+  </div>
+
+  <div class="bca2cpp" id="bca2cpp">
+    <textarea rows="150" cols="125" id="copp" readonly>
+
+          #include <stdio.h>
+          #include <conio.h>
+          void merge(int arr[], int l, int m, int r)
+          {
+              int i, j, k;
+              int n1 = m - l + 1;
+              int n2 = r - m;
+              int L[10];
+              int R[10];
+          
+              
+              for (i = 0; i < n1; i++)
+              L[i] = arr[l + i];
+              for (j = 0; j < n2; j++)
+              R[j] = arr[m + 1 + j];
+          
+              
+              i = 0;
+          
+              j = 0;
+          
+              
+              k = l;
+              while (i < n1 && j < n2) {
+              if (L[i] <= R[j]) {
+                  arr[k] = L[i];
+                  i++;
+              }
+              else {
+                  arr[k] = R[j];
+                  j++;
+              }
+              k++;
+              }
+          
+              
+              while (i < n1) {
+              arr[k] = L[i];
+              i++;
+              k++;
+              }
+          
+              
+              while (j < n2) {
+              arr[k] = R[j];
+              j++;
+              k++;
+              }
+          }
+          
+          void mergeSort(int arr[], int l, int r)
+          {
+              if (l < r) {
+             
+              int m = l + (r - l) / 2;
+          
+              
+              mergeSort(arr, l, m);
+              mergeSort(arr, m + 1, r);
+          
+              merge(arr, l, m, r);
+              }
+          }
+          
+          
+          void printArray(int A[], int size)
+          {
+              int i;
+              for (i = 0; i < size; i++)
+              cout<<" "<<a[i]<<endl;
+          }
+
+          int main()
+          {
+              int arr[100],arr_size,i;
+              clrscr();
+              cout<<"Enter total number of elements in an array : ";
+              cin>>arr_size;
+              for(i=0; i<arr_size; i++){
+                  ain>>&arr[i];
+              }            
+              mergeSort(arr, 0, arr_size - 1);
+          
+              cout<<"\nSorted array is \n";
+              printArray(arr, arr_size);
+              getch();
+              return 0;
+          }
+</textarea>
+  </div>
+  <video id="output" src="video.mp4" controls height="40%" width="45%">
+
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/d1.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

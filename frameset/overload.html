@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> OVERLOADING OF A FUNCTION</p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="50" cols="120" id="copp" readonly>
+class overloading{
+
+	int area(int l,int b)
+	{
+		return l*b;
+	}
+	double area(double r)
+	{
+		return (3.14*r*r);
+	}
+	 int area(int s)
+	{
+		return s*s;
+	}
+
+}
+
+class Overload
+{
+
+	public static void main(String args[])
+	{
+		overloading obj=new overloading();
+		System.out.println("Area of reactangle :   " +  obj.area(5,10));
+		System.out.println("Area of circle :   " +  obj.area(5.25));
+		System.out.println("Area of square :   " +  obj.area(5));
+	
+	
+	
+	}
+}
+</textarea>
+
+ </div>
+   
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/j8.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<html>
+    <head>
+        <meta name="google-site-verification" content="TahbSTEOyQsdIdi9flHf5FAMdyaVtndpZn5cTCQ0DVw" />
+<style>
+
+
+span{
+width:100%;
+position:absolute;
+top:235px;
+left:150px;
+
+}
+.form{
+position:absolute;
+top:120px;
+left:34%;
+height:60%;
+width:35%;
+background-color:white;
+border-radius:10%;
+}
+.sign{
+height:18%;
+width:100%;
+background-color:#0e96b5;
+border-top-right-radius:10px;
+border-top-left-radius:10px;
+}
+/*
+// for inner things like name and inputtype text*/
+.inner{
+position:absolute;
+top:90px;
+}
+input[type=text]{
+position:absolute;
+left:220px;
+
+}
+input[type=password]{
+position:absolute;
+left:220px;
+}
+
+input[type=number]{
+position:absolute;
+left:220px;
+}
+
+label{
+position:absolute;
+left:55px;
+}
+
+input[type=submit]{
+height:35px;
+width:90px;
+font-size:20px;
+background-color:black;
+color:red;
+border-radius:10%;
+cursor:pointer;
+position:relative;
+top:3px;
+left:120px;
+}
+input[type=reset]{
+height:35px;
+width:80px;
+font-size:20px;
+background-color:black;
+color:red;
+border-radius:10%;
+cursor:pointer;
+position:relative;
+left:150px;
+top:3px;
+}
+
+
+@media(max-width:1000px){
+.form{
+position:absolute;
+top:320px;
+left:2%;
+height:60%;
+width:95%;
+background-color:white;
+border-radius:10%;
+
+}
+}
+@media(max-width:1000px){
+.inner{
+position:absolute;
+top:180px;
+left:35px;
+
+}}
+
+@media(max-width:1000px){
+
+label{
+position:relative;
+left:5px;
+top:50px;
+}}
+
+@media(max-width:1000px){
+
+#name{
+position:absolute;
+left:480px;
+top:65px;
+height:80px;
+width:300px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+
+#class{
+position:absolute;
+left:480px;
+top:180px;
+height:80px;
+width:300px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+
+#roll{
+position:absolute;
+left:480px;
+top:300px;
+height:80px;
+width:300px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+#pass{
+position:absolute;
+left:480px;
+top:400px;
+height:80px;
+width:300px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+#pass2{
+position:absolute;
+left:480px;
+top:520px;
+height:80px;
+width:300px;
+border:3px solid black;
+}}
+
+@media(max-width:1000px){
+
+input[type=submit]{
+height:45px;
+width:110px;
+font-size:20px;
+background-color:black;
+color:red;
+border-radius:10%;
+cursor:pointer;
+position:relative;
+left:150px;
+}
+
+
+}
+
+@media(max-width:1000px){
+
+input[type=reset]{
+height:45px;
+width:110px;
+font-size:20px;
+background-color:black;
+color:red;
+border-radius:10%;
+cursor:pointer;
+position:relative;
+left:170px;
+}}
+@media(max-width:1000px){
+html{
+font-size:50px;
+}
+}
+
+@media(max-width:1000px){
+span{
+width:100%;
+position:absolute;
+top:670px;
+left:180px;
+
+}
+}
+</style>
+<script>
+function validation()
+</script>
+</head>
+<body bgcolor="cyan">
+<center>
+<div class="form">
+<div class="sign">
+<marquee> <h1>SIGN IN </h1></marquee>
+</div><div class="inner">
+<form name="form1" action="db3.php" method="post">
+<label for="name"> Name </label>
+<input type="text" id="name" name="name" length="70" width="50" placeholder="Enter Your Name"><br><br>
+<label for="class"> Class</label>	 
+<input type="text"  id="class" name="classs" placeholder="Enter Your class"><br><br>
+<label for="roll"> Roll no</label>
+<input type="number" id="roll" name="rolll" placeholder="Enter Your roll no."><br><br>
+<label for="pass"> Password </label>
+<input type="password"  id="pass" name="pass" placeholder="Enter Your password" id="pass1">
+<br><br>
+<label for="pass2"> Confirm password  </label>
+  <input type="password" id="pass2" name="pass2" placeholder="Enter Your Password Again"><br><br>
+  <input type="submit" value="SUBMIT" > <input type="Reset" value="RESET">
+  <span> <b>Already have account ?</b><a href="https://oversubtle-haste.000webhostapp.com/index.html"> LOGIN HERE </a> 
+</span>
+
+</form>
+</div>
+</div>
+</center>
+</body>
+</html>

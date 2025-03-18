@@ -1,0 +1,141 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> Menu driven program of <b> Stack </b> with all operations </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="115" cols="125" id="copp" readonly>
+ 
+            # include<stdio.h>
+            # include<conio.h>
+            # define max 10
+                int top=-1;
+                int arr[max];
+            
+            void push();
+            void pop();
+            void peek();
+            void display();
+            void main()
+            {
+                int choice;
+                clrscr();
+                while(1)
+                {
+                printf("\n\n 1.PUSH     2.POP       3.PEEK      4.DISPLAY       5.EXIT ");
+                printf("Enter your choice : ");
+                scanf("%d",&choice);
+                    switch(choice)
+                    {
+                        case 1: push();
+                        break;
+                        
+                        case 2: pop();
+                        break;
+                        
+                        case 3: peek();
+                        break;
+                        
+                        case 4: display();
+                        break;
+                        
+                        case 5: exit(1);
+                    }
+                }
+            
+                getch();
+            }
+            
+            void push()
+            {
+                int item;
+                if(top==max-1)
+                {
+                    printf("Overflow");
+                }
+                else
+                {
+                    printf("Enter element to push in the stack : ");
+                    scanf("%d",&item);
+                    top++;
+                    arr[top]=item;
+                }
+            }
+            
+            void pop()
+            {
+                if(top==-1)
+                {
+                    printf("Underflow");
+                }
+                else
+                {
+                    printf("Poped element %d ",arr[top]);
+                    top--;
+                }
+            }
+            
+            void display()
+            {
+                int i;
+                if(top==-1)
+                {
+                    printf("Underflow");
+                }
+                else
+                {
+                    printf("Elements are :  ");
+                    for(i=top; i>=0; --i)
+                    {
+                        printf("%d ",arr[i]);
+                    }
+            
+                }
+            }
+            
+            void peek()
+            {
+                if(top==-1)
+                {
+                    printf("Overflow");
+                }
+                else
+                {
+                    printf("Peeked element is : %d ",arr[top]);
+                }
+            }         
+
+       
+
+</textarea>
+ </div>
+ 
+
+    
+ <div class="output" id="outputid">
+    <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+   </div>
+   
+   <div class="code" id="codeid" >
+    <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+   </div>
+   <div class="image" id="php11">
+    <img class="php11"  src="outputs/d61.png" height="95%" width="95%">
+    <img class="php11"  src="outputs/d62.png" height="95%" width="95%" style="margin-top:70px;">
+      </div>
+</body>
+
+</html> 

@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script>
+         function fun(){
+            var x=document.querySelector("p");
+      //  var x=document.getElementById("demo").style.color="red";
+           x.style.color="blue";
+           var z=x.getAttribute("id");
+           //console.log(z);
+          
+           document.getElementById("hi").value=z;
+           }
+    </script>
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+<p id="demo" onmouseover="fun()"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum vitae aut est.
+     Consectetur vero asperiores quae repudiandae cupiditate laborum, aliquam fuga corrupti
+      natus necessitatibus labore dolores voluptates eum nam voluptatibus.
+</p>
+<div id="hi" style="height:500px; width:800px; background-color:red;"></div>
+<script>
+
+</script>
+</body>
+
+</html>

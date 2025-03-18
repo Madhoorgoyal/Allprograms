@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Code Compiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 200px;
+            margin-top: 10px;
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Online Code Compiler</h2>
+    
+    <label for="language">Choose Language:</label>
+    <select id="language">
+        <option value="62">Java</option>
+        <option value="54">C</option>
+        <option value="71">Python</option>
+        <option value="50">C++</option>
+    </select>
+
+    <br>
+
+    <textarea id="code" placeholder="Write your code here..."></textarea>
+
+    <br>
+
+    <button onclick="compileCode()">Run Code</button>
+
+    <h3>Output:</h3>
+    <pre id="output">Waiting for output...</pre>
+
+    <script>
+        function compileCode() {
+    let code = document.getElementById("code").value;
+    let languageId = document.getElementById("language").value;
+    let outputElement = document.getElementById("output");
+
+    outputElement.innerText = "Compiling... Please wait...";
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "cform.php", true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log("Response Status:", xhr.status);
+            console.log("Full Response:", xhr.responseText); // Log full response
+            
+            try {
+                let response = JSON.parse(xhr.responseText); // Attempt to parse JSON
+                
+                if (response.stdout) {
+                    outputElement.innerText = "Output:\n" + response.stdout;
+                } else if (response.stderr) {
+                    outputElement.innerText = "Error:\n" + response.stderr;
+                } else if (response.message) {
+                    outputElement.innerText = "Message:\n" + response.message;
+                } else {
+                    outputElement.innerText = "Unknown response:\n" + JSON.stringify(response);
+                }
+            } catch (error) {
+                outputElement.innerText = "JSON Parse Error: " + error.message;
+                console.error("Server Response (Not JSON):", xhr.responseText);
+            }
+        }
+    };
+
+    let requestData = JSON.stringify({ "code": code, "language": languageId });
+    console.log("Sending Data:", requestData);
+    xhr.send(requestData);
+}
+
+    </script>
+
+</body>
+</html>

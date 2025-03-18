@@ -1,0 +1,46 @@
+<html>
+    <style>
+              #but{
+        position:absolute;
+        left:84%;
+        top:3px;
+        border-radius: 5%;
+        height:30px;
+        background:black;
+        color:white;
+      } 
+      #but:hover{
+        background:white;
+        color:black;
+        cursor: pointer;
+
+      } 
+      p{
+        position: absolute;
+        top: 5px;
+        font-family:arial black;
+        font-size: 15px;
+      }
+      #te{
+        position: relative;
+           top:40px;
+           font-size: 16px;
+    }
+        </style>
+    <body>
+        <p> ENTER CODE YOU WANT  TO SEND TO DEVELOPER </p>
+            <form name="form11" action="admin.php" method="post">
+                
+                <textarea cols="100" rows="200" id="te" name="name1">
+ 
+                </textarea>
+                <input type="submit" value="SEND" id="but">
+				
+				<?php
+				require("adminsignup.html");
+				
+				
+				?>
+            </form>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> SINGLE INHERITANCE</p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="45" cols="120" id="copp" readonly>
+class A{
+	void display()
+	{
+		System.out.println("Base class A is here ");
+	}	
+}
+class B extends A
+{
+	void show()
+	{
+		System.out.println("Child class B is here ");
+	}
+	
+}
+
+class Single
+{
+	public static void main(String args[])
+	{
+		B b1=new B();
+		b1.display();
+		b1.show();
+		
+	}	
+}
+</textarea>
+
+ </div>
+
+ 
+    
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/php5.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

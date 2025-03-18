@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> Menu driven program of singly link list with all operations </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="200" cols="125" id="copp" readonly>
+       
+     # include<stdio.h>
+        # include<conio.h>
+        # include<stdlib.h>
+        struct node
+        {
+            int info;
+            struct node* next;
+        };
+            struct node *start;
+        void create()
+        {
+            struct node *p,*ptr;
+            p=(struct node *) malloc(sizeof(struct node));
+            printf("Enter node info");
+            scanf("%d",&p->info);
+            p->next=NULL;
+                if(start==NULL)
+                {
+                    start=p;
+                }
+                else
+                {
+                    ptr=start; 
+                    while(ptr->next!=NULL)
+                    {
+                        ptr=ptr->next;
+                    }
+                    ptr->next=p;
+                }
+        }
+        void display()
+        {
+            struct node *ptr;
+            if(start==NULL)
+            {
+                printf("Linked list is empty");
+            }
+                ptr=start;
+                 while(ptr->next!=NULL)
+                {
+                    printf("%d ",ptr->info);
+                    ptr=ptr->next;
+                }
+        }
+        void insert_beg()
+        {
+            struct node *p;
+            p=(struct node *) malloc(sizeof(struct node));
+            printf("\nEnter node value : ");
+            scanf("%d",&p->info);
+            p->next=NULL;
+            p->next=start;
+            start=p;
+        }
+        
+        void insert_end()
+        {
+            struct node *p,*ptr;
+            p=(struct node *) malloc(sizeof(struct node));
+            printf("\nEnter node value : ");
+            scanf("%d",&p->info);
+            p->next=NULL;
+            ptr=start;
+                 while(ptr->next!=NULL)
+                {
+                    ptr=ptr->next;
+                   
+                }
+                ptr->next=p;
+        }
+        
+        void insert_after()
+        {
+            int node_val;
+            struct node *p,*ptr,*q;
+            p=(struct node *) malloc(sizeof(struct node));
+            printf("\nEnter node value : ");
+            scanf("%d",&p->info);
+            p->next=NULL;
+            printf("\nENetr the node val after you want to insert : ");
+            scanf("%d",&node_val);
+            ptr=start;
+                  while(ptr->next!=NULL && ptr->info!=node_val)
+                {
+                    q=ptr;
+                    ptr=ptr->next;
+                }
+            p->next=ptr->next;
+            ptr->next=p;
+        }
+        
+        void delete_beg()
+        {
+            int x;
+            struct node *p;
+            p=start;
+            x=p->info;
+            start=p->next;
+            free(p);
+            printf("\nNode deleted is %d ",x);
+        }
+        
+        void delete_end()
+        {
+            struct node *p,*q;
+            int x;
+            p=start;
+            while(p->next!=NULL)
+            {
+                q=p;
+                p=p->next;
+        
+            }
+            q->next=p->next;
+            x=p->info;
+            free(p);
+            printf("\nDeleted node is %d ",x);
+        }
+        
+        void delete_node()
+        {
+            struct node *p,*q;
+            int x,val;
+            p=start;
+            printf("\nEnter the node value to be deleted : ");
+            scanf("%d",&val);
+            while(p->next!=NULL && p->info!=val)
+            {
+                q=p;
+                p=p->next;
+        
+            }
+            x=p->info;
+            q->next=p->next;
+            free(p);
+            printf("\nDeleted node is %d ",x);
+        }
+        
+        
+        
+        void main()
+        {
+            int ch;
+            clrscr();
+        
+            while(1)
+            {
+            printf("\n\n1.Create \t2.Display \n3.Insert a node at beginning \n4.Insert node at end \n5.Insert after a given node \n6.Delete node from strating \n7.Delete node at end \n8.del a given node \n9.exit\n");
+            printf("\n Enetr your choce");
+            scanf("%d",&ch);
+                switch(ch)
+                {
+                case 1: create();
+                break;
+                case 2: display();
+                break;
+                case 3: insert_beg();
+                break;
+                case 4: insert_end();
+                break;
+        
+                case 5: insert_after();
+                break;
+                case 6: delete_beg();
+                break;
+                case 7: delete_end();
+                break;
+                case 8: delete_node();
+                break;
+                case 9: exit(1);
+                break;
+                case 11: printf("wrong inoupu");
+                break;
+                }
+        
+            }
+        
+        
+        }
+</textarea>
+ </div>
+ 
+    
+ <div class="output" id="outputid">
+    <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+   </div>
+   
+   <div class="code" id="codeid" >
+    <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+   </div>
+   <div class="image" id="php11">
+    <img class="php11"  src="outputs/d41.png" height="20%" width="20%">
+    
+    <img class="php11"  src="outputs/d42.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d43.png" height="20%" width="20%" style="margin-top:70px;">
+    
+    <img class="php11"  src="outputs/d45.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d46.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d48.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d49.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d410.png" height="20%" width="20%" style="margin-top:70px;">
+    <img class="php11"  src="outputs/d411.png" height="20%" width="20%" style="margin-top:70px;">
+    </div>
+</body>
+
+</html> 

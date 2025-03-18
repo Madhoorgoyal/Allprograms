@@ -1,0 +1,88 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> OVERLOADING OF A FUNCTION</p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="50" cols="120" id="copp" readonly>
+        <?php
+
+        $conn=mysqli_connect("localhost","root","","student");
+        if(!$conn)
+        {
+        echo("Connection failed ");
+        }
+        echo "<br> Connected to database<br>";
+        
+        $name=$_POST["name"];
+        $dob=$_POST["dob"];
+        $gender=$_POST["gender"];
+        $address=$_POST["address"];
+        $city=$_POST["city"];
+        $pincode=$_POST["pincode"];
+        $phone=$_POST["phone"];
+        $email=$_POST["email"];
+        $membership_type=$_POST["membership-type"];
+        
+        
+        
+        
+        
+        
+        $sql="insert into membership values('','$name','$dob','$gender','$address','$city','$pincode','$phone','$email','$membership_type')";
+        
+        if(mysqli_query($conn,$sql)){
+            
+            echo "<br> Data inserted successfully <br>";
+            echo "<br> <br> You entered : - <br> ";
+            echo "Name :  $name <br> ";
+            echo "DOB :  $dob <br> ";
+            echo "GENDER :  $gender <br> ";
+            echo "ADDRESS :  $address <br> ";
+            echo "CITY :  $city <br> ";
+            echo "pincode :  $pincode <br> ";
+            echo "PHONE :  $phone <br> ";
+            echo "EMAIL :  $email <br> ";
+            echo "MEMBERSHIP_TYPE :  $membership_type <br> ";
+            
+        }
+        else
+        {
+            
+        die("Connection failed: " . mysqli_connect_error());
+        }
+        
+        
+        mysqli_close($conn);
+        ?>
+    
+</textarea>
+
+ </div>
+ 
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/php6.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

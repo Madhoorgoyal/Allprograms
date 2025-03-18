@@ -1,0 +1,90 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> ADDITION OF TWO NUMBER </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="80" cols="120" id="copp" readonly>
+# include<stdio.h>
+# include<conio.h>
+
+void search(int a[],int n,int item)
+{
+	int beg=0,end=n-1,i,f=0,mid;
+	while(beg<=end)
+	{
+		mid=(beg+end)/2;
+		if(a[mid]==item)
+		{
+			f=mid;
+			break;
+		}
+		if(a[mid]>item)
+			end=mid-1;
+		else
+			beg=mid+1;
+	}
+	if(f==0)
+	{
+		printf("item not found ");
+
+	}
+	else
+	{
+
+		printf("Item found at %d location ",f+1);
+	}
+
+}
+void main()
+{
+	int a[10],i,j,n;
+	clrscr();
+	printf("Enter total nunber of elements : ");
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		 printf("Enter %d element ",i+1);
+		 scanf("%d",&a[i]);
+	}
+		for(i=0; i<n; i++)
+	{
+		 printf("%d ",a[i]);
+	}
+       printf("\nEnter item to search : ");
+       scanf("%d",&j);
+       search(a,n,j);
+
+	getch();
+}
+
+</textarea>
+<video src="https://youtu.be/tsCX-GQ_Brw?si=dGie2p6KqirIUsIv" width="500px"> </video>
+ </div>
+ 
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/d7.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

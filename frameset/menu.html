@@ -1,0 +1,187 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> STATIC MEMBER</p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="300" cols="120" id="copp" readonly>
+import java.util.Scanner;
+
+class Menu
+{	
+	public static void main(String args[])
+	{
+		
+		Scanner scan=new Scanner(System.in);
+		System.out.print("Please enter a number of Rows :- ");
+		int r=scan.nextInt();
+		
+		System.out.print("Please enter a number of Cols :- ");
+		int c=scan.nextInt();
+		
+	    int arr[][]=new int[r][c];
+		System.out.print("Please enter first array row wise :- \n");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				arr[i][j]=scan.nextInt();
+			}
+		}		
+		
+		int arr2[][]=new int[r][c];
+		System.out.print("Please enter second array row wise :- \n");
+		
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				arr2[i][j]=scan.nextInt();
+			}
+		}
+			
+	
+			
+	int cho;
+	do
+	{
+		System.out.println("\n\n1. FOR DISPLAY");
+		System.out.println("2. FOR SUM");
+		System.out.println("3. FOR MULTIPLY");
+		System.out.println("4. FOR EXIT");
+		System.out.print("\n\nEnter option : ");
+	    cho=scan.nextInt();
+		fun f=new fun();
+		switch(cho)
+		{
+			case 1:
+			f.display(arr,arr2,r,c);
+			break;
+			
+			case 2:
+			f.sum(arr,arr2,r,c);
+			break;
+			
+			case 3:
+			f.multiply(arr,arr2,r,c);
+			break;
+			
+			default:
+			System.out.println("Wrong input ");
+			}
+		
+	}while(cho!=4);
+		
+	}
+}
+
+class fun{
+	
+	void display(int arr[][],int arr2[][],int r,int c)
+	{
+		System.out.println("First matrix \n");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				System.out.print(arr[i][j] + "  " );
+			}
+			System.out.println();
+		}
+		System.out.println("Second matrix \n");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				System.out.print(arr2[i][j] + "  " );
+			}
+				System.out.println();
+		}
+	}
+	
+	void multiply(int arr[][],int arr2[][],int r,int c)
+	{
+	int arr3[][]=new int[r][c];
+	for(int i=0; i<r; i++)
+	{
+		for(int j=0; j<c; j++)
+		{
+			arr3[i][j]=0;
+				for(int k=0; k<c; k++)
+				{
+					arr3[i][j]=arr3[i][j]+arr[i][k]*arr2[k][j];
+					
+				}
+		}
+				
+	}
+	
+	System.out.println("\n\nMultiplication of two matrix \n\n");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				System.out.print(arr3[i][j] + "  " );
+			}
+				System.out.println();
+		}	
+	}
+	
+	void sum(int arr[][],int arr2[][],int r,int c)
+	{
+		int arr3[][]=new int[r][c];
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				arr3[i][j]=arr[i][j]+arr2[i][j];
+			}
+				
+		}
+		System.out.println("\n\nSum of two matrix \n\n");
+		for(int i=0; i<r; i++)
+		{
+			for(int j=0; j<c; j++)
+			{
+				System.out.print(arr3[i][j] + "  " );
+			}
+				System.out.println();
+		}
+	}
+	
+}
+
+			
+</textarea>
+
+ </div>
+</body>
+  
+<div class="output" id="outputid">
+    <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+   </div>
+   
+   <div class="code" id="codeid" >
+    <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+   </div>
+   <div class="image" id="php11">
+    <img class="php11"  src="outputs/j131.png" height="95%" width="95%">
+	
+    <img class="php11"  src="outputs/j132.png" height="95%" width="95%" style="margin-top: 75px;">
+    <img class="php11"  src="outputs/j133.png" height="95%" width="95%" style="margin-top: 75px;">
+    <img class="php11"  src="outputs/j134.png" height="95%" width="95%" style="margin-top: 75px;">
+      </div>
+</html>

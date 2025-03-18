@@ -1,0 +1,97 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> ADDITION OF TWO NUMBER </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="100" cols="120" id="copp" readonly>
+      #include <stdio.h>
+        #include <conio.h>
+        #include <math.h>
+        
+        #define f(x) (x * x * x - 4 * x - 9)
+        #define g(x) (3 * x * x - 4)
+        
+        void main()
+        {
+            int step = 1, x;
+            float x0, x1, f0, g0, f1, e;
+        
+            clrscr();
+        
+            printf("Enter initial guess: ");
+            scanf("%f", &x0);
+        
+            printf("Enter tolerable error: ");
+            scanf("%f", &e);
+        
+            printf("Enter max iterations: ");
+            scanf("%d", &x);
+        
+            printf("\nStep\t\tx0\t\tf(x0)\t\tx1\t\tf(x1)\n");
+        
+            f1 = f(x0);
+        
+            do
+            {
+                g0 = g(x0);
+                f0 = f(x0);
+        
+                if (g0 == 0.0)
+                {
+                    printf("\nError: Division by zero.\n");
+                    exit(0);
+                }
+        
+                x1 = x0 - f0 / g0;
+        
+                f1 = f(x1);
+        
+                printf("%d\t\t%f\t%f\t%f\t%f\n", step, x0, f0, x1, f1);
+        
+                x0 = x1;
+                step++;
+        
+                if (step > x)
+                {
+                    printf("Not Convergent within %d iterations\n", x);
+                    exit(0);
+                }
+        
+            } while (fabs(f1) > e);
+        
+            printf("\nRoot is: %f\n", x1);
+        
+            getch();
+        }
+        
+</textarea>
+<video src="https://youtu.be/tsCX-GQ_Brw?si=dGie2p6KqirIUsIv" width="500px"> </video>
+ </div>
+
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/conm2.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>

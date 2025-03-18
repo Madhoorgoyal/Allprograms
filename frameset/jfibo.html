@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="main.css">
+
+<script src="main.js">
+    
+</script>
+    </head>
+<body>
+
+    <p class="texttop"> FIBBONACCI SERIES </p>
+    <input type="button" id="but" value="SELECT FULL CODE" onclick="copyy()"><br>
+    <div class="bca2">
+    <textarea  rows="50" cols="120" id="copp" readonly>
+import system.util.Scanner;
+class Fibonacci
+{
+	public static void main(String args[])
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.print("Enter a number to print Fibonacci series :  ");
+		int n=nextInt();
+		int a=0;
+		int b=1;
+		System.out.println(a);
+		System.out.println(b);
+		for(int i=2; i<n; i++)
+		{
+			int c=a+b;
+			System.out.println(c);
+			a=b;
+			b=c;
+		}
+
+	}
+}
+</textarea>
+
+ </div>
+
+ 
+    
+ <div class="output" id="outputid">
+  <button class="outputbutton" id="outputbtn" onclick="showoutput()"> Output </button>
+ </div>
+ 
+ <div class="code" id="codeid" >
+  <button class="codebutton" id="codebtn" onclick="showcode()"> Code </button>
+ </div>
+ <div class="image" id="php11">
+  <img class="php11"  src="outputs/j2.png" height="95%" width="95%">
+    </div>
+</body>
+
+</html>
