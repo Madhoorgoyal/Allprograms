@@ -1,0 +1,264 @@
+
+
+<html>
+
+<head>
+<style>
+.na{
+position:absolute;
+top:96px;
+left:35px;
+
+}
+.pa{
+position:absolute;
+top:160px;
+left:35px;
+}
+.inner{
+width:100%;
+height:20%;
+background:blue;
+
+}
+#name{
+margin-left:35px;
+width:80%;
+height:30px;
+border-radius:5px;
+border:3px solid black;
+}
+#pass{
+margin-left:35px;
+width:80%;
+height:30px;
+border-radius:5px;
+border:3px solid black;
+}
+.form{
+opacity:1.5;
+height:60%;
+width:30%;
+
+position:absolute;
+top:10%;
+left:36%;
+border-radius:10px;
+background:#e6ffff;
+}
+.login{
+font-size:50px;
+margin-left:60px;
+color:white;
+}
+#but{
+margin-left:35px;
+margin-top:25px;
+height:10%;
+width:80%;
+border-radius:10px;
+background:blue;
+color:white;
+cursor:pointer;
+}
+#but:hover{
+opacity:0.8;
+}
+#name:hover{
+border:3px solid blue;
+}
+.lower{
+height:15%;
+width:30%; 
+position:absolute; 
+left:36%; 
+top:75%; 
+background:#e6ffff;
+border-radius:5px;
+}
+.new{
+font-size:22px;
+position:absolute;
+left:50px;
+top:25px;
+}
+.divchk{
+position:absolute;
+left:344px;
+top:205px;
+height:11px;
+width:10px;
+border:3px solid black;
+}
+.chk1{
+
+position:absolute;
+left:342.5px;
+top:205px;
+}
+
+@media(max-width:1000px){
+#name{
+margin-left:80px;
+width:80%;
+height:30px;
+border-radius:5px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+#pass{
+margin-left:38px;
+width:80%;
+height:49px;
+border-radius:5px;
+border:3px solid black;
+}}
+
+@media(max-width:1000px){
+.form{
+opacity:1.5;
+height:30%;
+width:65%;
+position:absolute;
+top:10%;
+left:15%;
+border-radius:10px;
+background:#e6ffff;
+}}
+
+@media(max-width:1000px){
+#name{
+position:relative;
+left:-43px;
+width:80%;
+height:50px;
+border-radius:5px;
+border:3px solid black;
+}}
+
+@media(max-width:1000px){
+.login{
+font-size:50px;
+margin-left:150px;
+
+color:white;
+}
+}
+
+@media(max-width:1000px){
+.inner{
+width:100%;
+height:18%;
+background:blue;
+
+}}
+
+@media(max-width:1000px){
+.na{
+position:absolute;
+top:77px;    //55
+left:45px;
+font-size:35px;
+}}
+@media(max-width:1000px){
+.pa{
+position:absolute;
+top:172px;     //145
+left:45px;
+font-size:35px;
+}}
+
+
+
+
+
+
+
+@media(max-width:1000px){
+.lower{
+height:12%;
+width:65%; 
+position:absolute; 
+left:15%; 
+top:42%; 
+background:#e6ffff;
+border-radius:5px;
+}}
+@media(max-width:1000px){
+.new{
+font-size:35px;
+position:absolute;
+left:50px;
+top:25px;
+}}
+@media(max-width:1000px){	
+.divchk{
+position:absolute;
+left:527px;
+top:265px;
+height:11px;
+width:10px;
+border:3px solid black;
+}}
+@media(max-width:1000px){
+.chk1{
+position:absolute;
+left:524px;
+top:264px;
+}}
+	
+.chk1:hover{
+ cursor:pointer;   
+    
+}
+
+z
+</style>
+
+<script>
+function alertt(){
+	
+	alert("Submitted successfully");
+}
+
+function togle(){
+if(chk11.checked) pass.type="text";
+else pass.type="password";
+}
+
+function  validation(){
+var name=document.getElementById("name").value;
+var pass=document.getElementById("pass").value;
+if(name=="" || pass==""){
+	alert("Fields cant be empty ");
+	return false;
+}
+return true;
+}
+</script>
+</head>
+<body bgcolor="#45bbff" style="background-image:url('file:///C:/Users/abc/OneDrive/Desktop/newcar.jpg'); background-size:100% 100%; ">
+<div class="form">
+<div class="inner">
+<span class="login">Login Form </span>
+</div>
+<form action="db10.php" method="post" action="" onsubmit="return validation()">
+<br><br> <p class="na"> Name </p><br>
+<input type="text" id="name" name="name" placeholder="Enter Your Name">
+<br><br><p class="pa">Password </p><br>
+<input type="password" id="pass" name="password" placeholder="Enter Your Password"><br>
+<input type="submit" value="SUBMIT" id="but" >
+
+
+<div class="divchk">
+</div>
+<input type="checkbox" id="chk11" class="chk1" onclick="togle()">
+
+
+</form>
+</div>
+<div class="lower" >
+<span class="new">Don't have account ? <a href="index2.html"> Sign Up </a></span>
+</div>
+</body>
+</html>
