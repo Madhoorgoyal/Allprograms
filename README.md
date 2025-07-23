@@ -29,7 +29,7 @@
 - ✅ code with copy button.
 - ✅ Output of the code.
 
-          Later on signup and login page will be connected(The login and signup page is ready just DB is neede).
+          Later on signup and login page will be connected(The login and signup page is ready just DataBase is needed).
   **🛠️ Built With**
 
 - HTML5
